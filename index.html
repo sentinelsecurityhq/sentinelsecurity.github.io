@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';">
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://formspree.io; object-src 'none'; base-uri 'self'; form-action https://formspree.io; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Sentinel Security Network Protection for Businesses</title>
   <meta name="description"
     content="Sentinel monitors your business network 24/7 and sends plain-English alerts when something looks wrong. No IT team required. Start with a free assessment.">
@@ -404,7 +405,8 @@
         href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a></p>
   </footer>
 
-  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+    aria-hidden="true">
     <div class="modal" id="modal">
       <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
       <div class="modal-inner">
@@ -451,27 +453,30 @@
         </div>
 
         <div class="modal-right">
-          <form id="assessmentForm" novalidate>
+          <form id="assessmentForm" action="https://formspree.io/f/xgororkn" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Free Assessment Request">
+            <input type="hidden" name="_next" value="https://sentinelcybers.com">
             <div class="form-group">
               <label for="fname">Your Name *</label>
-              <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" required>
+              <input type="text" id="fname" name="name" placeholder="John Smith" autocomplete="name" maxlength="100"
+                required>
               <span class="field-error">Please enter your name</span>
             </div>
             <div class="form-group">
               <label for="fbusiness">Business Name *</label>
               <input type="text" id="fbusiness" name="business" placeholder="Acme Consulting"
-                autocomplete="organization" required>
+                autocomplete="organization" maxlength="120" required>
               <span class="field-error">Please enter your business name</span>
             </div>
             <div class="form-group">
               <label for="femail">Business Email *</label>
               <input type="email" id="femail" name="email" placeholder="you@yourbusiness.com" autocomplete="email"
-                required>
+                maxlength="254" required>
               <span class="field-error">Please enter a valid email address</span>
             </div>
             <div class="form-group">
               <label for="fphone">Phone Number <span class="optional">(optional)</span></label>
-              <input type="tel" id="fphone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+              <input type="tel" id="fphone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" maxlength="30">
             </div>
             <div class="form-group">
               <label for="fsize">Number of Employees <span class="optional">(optional)</span></label>
@@ -494,8 +499,8 @@
                 stroke-linejoin="round" />
             </svg>
             <h3>Request received.</h3>
-            <p>Your email client should have opened with a pre-filled message. If it didn't, reach us directly at <a
-                href="mailto:oxajamal@gmail.com">oxajamal@gmail.com</a>.</p>
+            <p>Your request has been submitted. You can also reach us directly at <a
+                href="mailto:contact@sentinelcybers.com">contact@sentinelcybers.com</a>.</p>
             <p>We'll be in touch within one business day.</p>
           </div>
         </div>
