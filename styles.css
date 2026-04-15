@@ -1281,3 +1281,11 @@ footer a:hover {
     font-size: .78rem
   }
 }
+
+.form-submit-error {
+  color: #FCA5A5;
+  font-size: .82rem;
+  margin-top: .75rem;
+  text-align: center;
+  min-height: 1.2em;
+}
